@@ -9,6 +9,16 @@
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script>
+    document.addEventListener
+    (
+        'DOMContentLoaded',
+        function(event)
+        {
+            liveagent.addCustomDetail('URL', window.location.href);
+        }
+    );
+</script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
@@ -34,7 +44,7 @@
 
 		embedded_svc.init(
 			'https://cs113.salesforce.com',
-			'https://dean-sellkorea.cs113.force.com/CustomerSupportCenter',
+			'https://dean-webchats.cs113.force.com/liveAgentSetupFlow',
 			gslbBaseURL,
 			'00D1s0000000TUN',
 			'Jan_Group',
