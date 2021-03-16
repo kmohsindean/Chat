@@ -14,12 +14,13 @@
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-embedded_svc.settings.prepopulatedPrechatFields = {
-    FirstName: '',
-    LastName: '',
-    Email: '',
-    Subject: ''
-};
+<input type="hidden" name="00N2w00000DQLIv" id="00N2w00000DQLIv" value="CustField"> <!-- UUID-->
+
+<input type="hidden" name="00N2w00000DOtl8" id="00N2w00000DOtl8" value="CustField"> <!-- Vendor Id-->
+
+<input type="hidden" name="00N2w00000DQLJ0" id="00N2w00000DQLJ0" value="CustField"> <!-- Product Name-->
+
+<input type="hidden" name="00N2w00000DPvjw" id="00N2w00000DPvjw" value="CustField"> <!-- Supplier/Customer-->
 
 
 embedded_svc.settings.extraPrechatFormDetails = [{
@@ -29,20 +30,6 @@ embedded_svc.settings.extraPrechatFormDetails = [{
                 "transcriptFields": ["URL__c"]
                 }];
 
-
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "Supplier/Customer",
-            //  "value":  ,
-                "displayToAgent": true,
-                "transcriptFields": ["Supplier_Customer__c"]
-                }];
-
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "UUID",
-            //  "value":  ,
-                "displayToAgent": true,
-                "transcriptFields": ["UUID__c"]
-                }];
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
