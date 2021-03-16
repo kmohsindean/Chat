@@ -10,9 +10,6 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 <input type="hidden" name="00N2w00000DQLIv" id="00N2w00000DQLIv" value="CustField"> <!-- UUID-->
 
@@ -21,6 +18,10 @@
 <input type="hidden" name="00N2w00000DQLJ0" id="00N2w00000DQLJ0" value="CustField"> <!-- Product Name-->
 
 <input type="hidden" name="00N2w00000DPvjw" id="00N2w00000DPvjw" value="CustField"> <!-- Supplier/Customer-->
+
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
 
 embedded_svc.settings.extraPrechatFormDetails = [{
