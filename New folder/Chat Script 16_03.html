@@ -14,41 +14,64 @@
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "URL",
-                "value":  window.location.href,
-                "displayToAgent": true,
-                "transcriptFields": ["URL__c"]
-                }];
+ embedded_svc.settings.extraPrechatFormDetails = [{
+  "label": "Supplier/Customer",
+  "value": "Supplier",
+  "displayToAgent": true
+          },{
+   "label": "Product Name",
+  "value": "Phone",
+  "displayToAgent": true 
+               },{
+   "label": "URL",
+  "value": "www.salesforce.com",
+  "displayToAgent": true
+ },{
+   "label": "Vendor ID",
+  "value": "1234",
+  "displayToAgent": true
+ },{
+   "label": "UUID",
+  "value": "5678",
+  "displayToAgent": true
+}];
 
-
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "Supplier/Customer",
-                "value":  "Customer From Sellkorea",
-                "displayToAgent": true,
-                "entityName":"Case"
-                }];
-
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "UUID",
-                "value": "123456" ,
-                "displayToAgent": true,
-                "entityName":"Case"
-                }];
-
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "Vendor Id",
-                "value": "78910" ,
-                "displayToAgent": true,
-                "entityName":"Case"
-                }];
-
-embedded_svc.settings.extraPrechatFormDetails = [{
-                "label": "Product Name",
-                "value":  "Test Product",
-                "displayToAgent": true,
-                "entityName":"Case"
-                }];
+embedded_svc.settings.extraPrechatInfo = [{
+  "entityName": "Case",
+  "showOnCreate": true,
+  "saveToTranscript": "CaseId",
+  "entityFieldMaps": [{
+    "isExactMatch": false,
+    "fieldName": "Supplier_Customer__c",
+    "doCreate": true,
+    "doFind": false,
+    "label": "Supplier/Customer"
+       }, {
+    "isExactMatch": false,
+    "fieldName": "Product_Name__c",
+    "doCreate": true,
+    "doFind": false,
+    "label": "Product Name"
+            }, {
+    "isExactMatch": false,
+    "fieldName": "URL__c",
+    "doCreate": true,
+    "doFind": false,
+    "label": "URL"
+}, {
+    "isExactMatch": false,
+    "fieldName": "Vendor_Id__c",
+    "doCreate": true,
+    "doFind": false,
+    "label": "Vendor Id"
+}, {
+    "isExactMatch": false,
+    "fieldName": "UUID__c",
+    "doCreate": true,
+    "doFind": false,
+    "label": "UUID"
+  }]
+}]
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
